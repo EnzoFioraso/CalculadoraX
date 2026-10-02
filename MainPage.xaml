@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculadoraX.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label Text="Valor da conta"></Label>
+            <Entry
+                x:Name="ContaEntry"
+                Placeholder="Digite o valor da compra"></Entry>
+
+            <Label
+            Text="Valor da gorjeta"
+                ></Label>
+
+            <Label
+                x:Name="ValorGorjetaLabel"
+                Text="R$ 0,00" ></Label>
+
+            <Label
+                    Text="% da Gorjeta:"></Label>
+            <Label 
+                        x:Name="PorcentagemGorjetaLabel"
+                        Text="5%"></Label>
+
+            <Label x:Name="ValorTotalLabel"
+                   Text="Value"
+                ></Label>
+
+            <Slider
+                        x:Name="PorcentagemSlider"
+                        Minimum="0"
+                        Maximum="100"
+                        Value="5"
+                ValueChanged="SliderGorjeta_ValueChanged"></Slider>
+
+
+            <Button
+                x:Name="ArredondarParaBaixoButton"
+                Text="Arrendondar para Baixo" 
+                Clicked="ArredondarPraBaixo"></Button>
+
+            <Button
+                x:Name="ArredondarParaCimaButton"
+                Text="Arrendondar para Cima" 
+                Clicked="ArredondarParaCimaButton_Clicked"></Button>
+            <Button Text="15" Clicked="Gorjeta15PorcentoButton_Clicked"></Button>
+<Button Text="20" Clicked="Gorjeta20PorcentoButton_Clicked"></Button>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
